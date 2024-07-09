@@ -16,7 +16,7 @@ from math import sqrt
 
 class BAM(nn.Module):
     def __init__(self,in_channels,r = 4):
-        super(Dense_Co_Attention,self).__init__()
+        super(BAM,self).__init__()
         
         self.conva = nn.Conv2d(in_channels,in_channels // r, 1)   ###[B,128,7,7]
         self.convb = nn.Conv2d(in_channels,in_channels // r, 1)   ###[B,128,7,7]
