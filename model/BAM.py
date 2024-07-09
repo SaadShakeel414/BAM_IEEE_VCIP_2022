@@ -12,7 +12,7 @@ from torch.nn.parameter import Parameter
 from math import sqrt
 
     
-################################Dense-Co-Attention###########################
+################################Bidirectional Attention Module###########################
 
 class BAM(nn.Module):
     def __init__(self,in_channels,r = 4):
@@ -136,7 +136,7 @@ class LResNet_BAM_MFR(nn.Module):
 
     def __init__(self, block, layers, filter_list, is_gray=False, cardinality = 1):
         self.inplanes = 64
-        super(LResNet_MFR, self).__init__()
+        super(LResNet_BAM_MFR, self).__init__()
         # input is (mini-batch,3 or 1,112,96)
         # use (conv3x3, stride=1, padding=1) instead of (conv7x7, stride=2, padding=3)
         if is_gray:
